@@ -172,12 +172,12 @@ class Home extends Component {
   }
 
   getAllData = async () => {
-    const covidUrl = 'https://apis.ccbp.in/covid19-state-wise-data'
-    const method = {
+    const apiUrl = 'https://apis.ccbp.in/covid19-state-wise-data'
+    const options = {
       method: 'GET',
     }
 
-    const response = await fetch(covidUrl, method)
+    const response = await fetch(apiUrl, options)
     if (response.ok) {
       const data = await response.json()
       let nationalWideConfirmedCases = 0
